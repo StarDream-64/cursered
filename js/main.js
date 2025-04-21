@@ -3,6 +3,12 @@ const container
 
 container.addEventListener('mousemove',
     (event) => {
+        const drawMode = document.querySelector('input[name="drawModeGroup"]:checked')?.value
+if(drawMode=="clickDraw"){
+   if (event.buttons !==1){
+    return
+   }
+} 
         const posX = event.offsetX;
         // console. log( 'posX: posX);
         const posY = event.offsetY;
